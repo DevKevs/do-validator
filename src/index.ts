@@ -1,5 +1,5 @@
 /**
- * The function `validateDominicanDocument` in JavasScript validates a Dominican Republic
+ * The function `validateDominicanDocument` in TypeScript validates a Dominican Republic
  * identification document number.
  * @param {string} document - The code you provided is a function that validates a Dominican Republic
  * national identification document number (Cédula de Identidad y Electoral). The function takes a
