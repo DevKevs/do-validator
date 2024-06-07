@@ -13,7 +13,7 @@ npm install do-validator
 # Use
 
 ```sh
-import validateDominicanDocument from 'do-validator';
+import { validateDominicanDocument } from 'do-validator';
 
 const validation = validateDominicanDocument('12345678901');
 
