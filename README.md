@@ -34,7 +34,7 @@ boolean: true if the ID number is valid, false otherwise.
 
 # Example
 ```sh
-import validateDominicanDocument from 'do-validator';
+import { validateDominicanDocument } from 'do-validator';
 
 const validId = 'YOUR_DOMINICAN_DOCUMENT';
 const invalidId = '12345678901';
