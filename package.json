@@ -1,0 +1,33 @@
+{
+  "name": "do-validator",
+  "version": "1.0.0",
+  "description": "This package offers a simple and efficient way to validate Dominican Republic ID numbers. Perfect for developers who need to ensure the validity of identity documents in their applications. It checks the format and integrity of the ID number according to official rules.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevKevs/do-validator.git"
+  },
+  "keywords": [
+    "TS",
+    "validator",
+    "DO"
+  ],
+  "author": "DevKevs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevKevs/do-validator/issues"
+  },
+  "homepage": "https://github.com/DevKevs/do-validator#readme",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "typescript": "^5.4.5"
+  }
+}
