@@ -1,1 +1,7 @@
-node_modules/
+# Compiled output
+/dist
+/tmp
+/out-tsc
+
+# Node
+/node_modules
