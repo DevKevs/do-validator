@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build",
-    "deploy": "npm run build && npm publish --access public"
+    "deploy": "npm run build && npm publish --access public",
+    "watch": ""
   },
   "files": [
     "dist"
@@ -30,5 +31,8 @@
   "devDependencies": {
     "@types/node": "^20.14.2",
     "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "nodemon": "3.1.3"
   }
 }
