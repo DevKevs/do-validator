@@ -1,8 +1,8 @@
 {
   "name": "do-validator",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "This package offers a simple and efficient way to validate Dominican Republic ID numbers. Perfect for developers who need to ensure the validity of identity documents in their applications. It checks the format and integrity of the ID number according to official rules.",
-  "main": "dist/index.ts",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
