@@ -1,3 +1,3 @@
 import { documentValidator } from ".";
 
-console.log(documentValidator("40242989420"));
+console.log(documentValidator("12345678901"));

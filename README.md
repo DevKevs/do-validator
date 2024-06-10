@@ -13,15 +13,15 @@ npm install do-validator
 # Use
 
 ```sh
-import { validateDominicanDocument } from 'do-validator';
+import { documentValidator } from 'do-validator';
 
-const validation = validateDominicanDocument('12345678901');
+const validation = documentValidator('12345678901');
 
 console.log(validation);
 ```
 # API 
 ```sh
-validateDominicanDocument(document)
+documentValidator(document)
 ```
 
 Validates a Dominican identity card number.
@@ -34,13 +34,13 @@ boolean: true if the ID number is valid, false otherwise.
 
 # Example
 ```sh
-import { validateDominicanDocument } from 'do-validator';
+import { documentValidator } from 'do-validator';
 
 const validId = 'YOUR_DOMINICAN_DOCUMENT';
 const invalidId = '12345678901';
 
-console.log(validateDominicanDocument(validId));  // true
-console.log(validateDominicanDocument(invalidId));  // false
+console.log(documentValidator(validId));  // true
+console.log(documentValidator(invalidId));  // false
 
 ```
 # Author
