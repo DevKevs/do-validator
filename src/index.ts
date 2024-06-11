@@ -15,8 +15,7 @@ export function documentValidator(document: string): boolean {
     throw new Error('The provided document should have only 11 characters');
   }
 
-  const cedula = documentId;
-  const c = cedula.split('');
+  const c = documentId.split('');
   const v = [1, 2, 1, 2, 1, 2, 1, 2, 1, 2];
   let result = 0;
   let oc;
@@ -45,7 +44,7 @@ export function documentValidator(document: string): boolean {
 
   if (uj < dp) {
     // eslint-disable-next-line prettier/prettier
-    dp = (uj + 10) - dp;
+    dp = uj + 10 - dp;
   }
 
   const validationResult = c[10] == dp.toString();
