@@ -4,7 +4,7 @@ This package offers a simple and efficient way to validate Dominican Republic ID
 
 # Installation
 
-you can install the package using:
+You can install the package using:
 
 ```sh
 npm install do-validator
@@ -12,16 +12,20 @@ npm install do-validator
 
 # Use
 
-```sh
-import { documentValidator } from 'do-validator';
+```ts
+import { documentValidator, electoralRollValidation } from 'do-validator';
 
-const validation = documentValidator('12345678901');
+const document = '10000000001';
 
-console.log(validation);
+console.log(documentValidator(document));
+
+const validation = async () =>  console.log(await electoralRollValidation(document));
+
+validation();
 ```
 # API 
-```sh
-documentValidator(document)
+```ts
+documentValidator(document) //Faster
 ```
 
 Validates a Dominican identity card number.
@@ -31,9 +35,29 @@ document (string): The identity card number to validate 11 characters without sp
 
 ### Return
 boolean: true if the ID number is valid, false otherwise.
+<hr>
 
-# Example
-```sh
+```ts
+//validation by API Call
+await electoralRollValidation(document) 
+```
+Validates a Dominican identity card number by an API Call in the Electoral roll.
+
+### Parameters
+document (string): The identity card number to validate 11 characters without special characters.
+
+### Return
+```ts
+{
+    statusCode: number,
+    valid: boolean,
+    message: string
+}
+```
+
+
+# Examples
+```ts
 import { documentValidator } from 'do-validator';
 
 const validId = 'YOUR_DOMINICAN_DOCUMENT';
@@ -41,6 +65,19 @@ const invalidId = '12345678901';
 
 console.log(documentValidator(validId));  // true
 console.log(documentValidator(invalidId));  // false
+
+```
+
+```ts
+import { electoralRollValidation } from 'do-validator';
+
+const validId = 'YOUR_DOMINICAN_DOCUMENT';
+const invalidId = '12345678901';
+
+const validation = async (document) =>  console.log(await electoralRollValidation(document));
+
+validation(validId); // valid json response
+validation(invalidId) // invalid json response
 
 ```
 # Author
