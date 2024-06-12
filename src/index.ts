@@ -25,6 +25,36 @@ export function documentValidator(document: string): boolean {
   }
 }
 
+/**
+ * The function `electoralRollValidation` validates in a electoral roll register by
+ * making an API call.
+ * @param {string} document - The `document` parameter in the `electoralRollValidation` function is
+ * expected to be a string representing an identification document number.
+ * @returns The function `electoralRollValidation` returns the response from the API endpoint
+ * after validating the provided
+ * document number.
+ */
+export async function electoralRollValidation(document: string) {
+  try {
+    const documentId: string = removeHyphens(document);
+
+    if (documentId.length !== 11) {
+      throw new Error('The provided document must have 11 characters.');
+    }
+
+    const promise = await fetch(`https://api.digital.gob.do/v3/cedulas/${documentId}/validate`);
+    const response = await promise.json();
+    
+    return { 
+      statusCode: promise.status,
+      valid: response.valid, 
+      message: response.message ?? 'The provided document is valid.'
+    };
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 function removeHyphens(documentId: string): string {
   if (documentId.includes('-')) {
     return documentId.replace(/-/g, '');
