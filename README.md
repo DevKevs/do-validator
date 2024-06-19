@@ -80,6 +80,11 @@ validation(validId); // valid json response
 validation(invalidId) // invalid json response
 
 ```
+## Looking for Flutter / Dart version? 
+#### Also available in pub.dev, take a look! <br />
+[![npm](https://img.shields.io/badge/do__validator-blue.svg?logo=dart&logoColor=white)](https://pub.dev/packages/do_validator) 
+
 # Author
-DevKevs
-<a href="https://www.linkedin.com/in/kevin-f%C3%A9liz-encarnaci%C3%B3n-a20888200/" target="_blank">LinkedIn</a> <a href="https://devkevs.netlify.app/#/home" target="_blank">Portfolio</a> <a href="https://x.com/DevKevs_" target="_blank">Twitter (X)</a>
+#### DevKevs 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/kevin-féliz-encarnación-a20888200)
+[![X](https://img.shields.io/badge/Twitter(X)-black.svg?logo=X&logoColor=white)](https://x.com/DevKevs_) [![Portfolio](https://img.shields.io/badge/Portfolio-blue.svg?logo=angular&logoColor=white)](https://devkevs.netlify.app) 
